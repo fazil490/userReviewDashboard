@@ -50,7 +50,7 @@ const UserReviewDashboard = () => {
               <IoMdArrowDropdown />
             </span>
           </div>
-          <button className="hover:underline">Reset</button>
+          <button onClick={() => setTableData(userReiewList)} className="hover:underline">Reset</button>
           <div
             className={`absolute ${
               showDropDown === "DateDropDown" ? "block" : "hidden"
