@@ -4,6 +4,8 @@ import { FaStar } from "react-icons/fa6";
 import { useContext } from "react";
 import { DataContext } from "../DataContext";
 import Calendar from "react-calendar";
+import userReiewList from "../data"
+
 const ratingsDropDown = [1, 2, 3, 4, 5];
 
 const UserReviewDashboard = () => {
@@ -11,6 +13,7 @@ const UserReviewDashboard = () => {
     handleFilterRating,
     handleDateChange,
     showDropDown,
+    setTableData,
     setShowDropDown,
     // fetchData
   } = useContext(DataContext);
@@ -47,9 +50,7 @@ const UserReviewDashboard = () => {
               <IoMdArrowDropdown />
             </span>
           </div>
-          <button className="hover:underline">
-            Reset
-          </button>
+          <button className="hover:underline">Reset</button>
           <div
             className={`absolute ${
               showDropDown === "DateDropDown" ? "block" : "hidden"
